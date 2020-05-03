@@ -20,11 +20,23 @@
 #define RAmotorPin2  11    // IN3 auf ULN2003 driver 1   // 11 / 26
 #define RAmotorPin4  12    // IN4 auf ULN2003 driver 1   // 12 / 28
 
-// DEC Motor pins
+#ifdef __AVR_ATmega328__
+// ATmega328p (like the Uno), __AVR_ATmega328__
+// DEC Motor pins for UNO
 #define DECmotorPin1  15    // IN1 auf ULN2003 driver 2
 #define DECmotorPin2  17    // IN2 auf ULN2003 driver 2
 #define DECmotorPin3  16    // IN3 auf ULN2003 driver 2
 #define DECmotorPin4  18    // IN4 auf ULN2003 driver 2
+#endif
+
+#ifdef __AVR_ATmega2560__
+// ATmega2560 (Mega), __AVR_ATmega2560__
+// DEC Motor pins for MEGA
+#define DECmotorPin1  55    // IN1 auf ULN2003 driver 2
+#define DECmotorPin2  57    // IN2 auf ULN2003 driver 2
+#define DECmotorPin3  56    // IN3 auf ULN2003 driver 2
+#define DECmotorPin4  58    // IN4 auf ULN2003 driver 2
+#endif
 
 // Menu IDs
 #define RA_Menu 0
